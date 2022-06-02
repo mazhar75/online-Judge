@@ -1,0 +1,74 @@
+/** Never give up.slow and steady wins the race*/
+/** author:Md.Mazharul Islam*/
+#include <iostream>
+#include<vector>
+#include <cstdlib>
+#include<algorithm>
+#include<cmath>
+#include<queue>
+#include<cstdio>
+#include <cstdlib>
+#include<set>
+#include<map>
+#include<sstream>
+#include<string>
+#include<utility>
+#define F first
+#define S second
+#define PB push_back
+#define MP make_pair
+using namespace std;
+typedef long long int ll;
+typedef pair<int,int>pii;
+const int N =1e2+10;
+
+//#define REP(i, a, b) for (long long int i=a; i<b; i++)
+//#define RUN_FAST ios::sync_with_stdio(false);
+class cp{
+public:
+void think();
+void binary();
+};
+
+
+
+void cp::think(){
+int n;
+cin>>n;
+vector<int>a(n);
+vector<int>b(n);
+vector<int>c;
+vector<int>d;
+for(int i=0;i<n;i++) cin>>a[i];
+for(int i=0;i<n;i++) cin>>b[i];
+int m,k;
+for(int i=0;i<n;i++){
+
+m=min(a[i],b[i]);
+k=max(a[i],b[i]);
+c.push_back(m);
+d.push_back(k);
+}
+int j=*max_element(c.begin(),c.end());
+int t=*max_element(d.begin(),d.end());
+int ans=j*t;
+cout<<ans<<endl;
+
+
+}
+
+
+
+
+
+
+int main() {
+    //RUN_FAST;
+    cp me;
+  int t;
+  cin>>t;
+  while(t--){
+    me.think();
+  }
+  return 0;
+}
