@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+	int t;
+	scanf("%d",&t);
+	while(t--){
+		int n;
+		scanf("%d",&n);
+		int x,sum=0;
+		int a[n];
+		for(int i=0;i<n;i++){
+			scanf("%d",&x);
+			sum+=x;
+			a[i]=x;
+		}
+		if(sum%n!=0)
+		printf("-1\n");
+		else{
+			int avg=sum/n,cnt=0;
+			for(int i=0;i<n;i++){
+				if(avg<a[i])
+				cnt++;
+			}
+			printf("%d\n",cnt);
+		}
+	}
+	return 0;
+}
